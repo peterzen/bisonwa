@@ -31,7 +31,7 @@ jobs:
 
         - name: Prepare snapcraft.yml
           working-directory: client/cmd/bisonw-desktop
-          run: pkg/prepare-snap.sh
+          run: pkg/pkg-snap.sh
 
         - name: Build snap package
           uses: snapcore/action-build@2ee46bc29d163c9c836f2820cc46b39664bf0de2 # v1.1.3
