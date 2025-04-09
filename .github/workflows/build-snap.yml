@@ -34,13 +34,13 @@ jobs:
           run: pkg/prepare-snap.sh
 
         - name: Build snap package
-          uses: snapcore/action-build@2ee46bc29d163c9c836f2820cc46b39664bf0de2 # v1.1.3
+          uses: snapcore/action-build@3bdaa03e1ba6bf59a65f84a751d943d549a54e79 # v1.3.0
           id: build
           with:
             path: client/cmd/bisonw-desktop
 
         - name: Publish snap to Snap Store
-          uses: snapcore/action-publish@0a8d537ae06f4a292e8b4ef1084cd5631b3c6871 # v1.1.1
+          uses: snapcore/action-publish@214b86e5ca036ead1668c79afb81e550e6c54d40 # v1.2.0
           env:
             SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPCRAFT_STORE_CREDENTIALS }}
           with:
